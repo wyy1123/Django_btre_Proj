@@ -1,0 +1,56 @@
+MODEL/DB FIELDS
+
+--we'll have 3 separate tables for what we need: listing, realtor, and contact
+
+### LISTING
+id: INT 
+realtor: INT (FOREIGN KEY [realtor])
+address: STR 
+city: STR 
+state: STR 
+zipcode: STR photo_1: STR
+description: TEXT 
+price: INT 
+bedrooms: INT
+bathrooms: DECIMAL
+garage: INT [0]
+sqft: INT 
+lot_size: FLOAT 
+--we want to specify whether a listing is is_published
+--we want the default to be true
+is_published: BOOL [true]
+list_date: DATE 
+--we are not actually storing the images,
+-- we are storing locations of the image
+photo_main: STR
+photo_1: STR
+photo_2: STR
+photo_3: STR
+photo_4: STR
+photo_5: STR
+photo_6: STR
+
+### REALTOR
+id: INT
+name: STR
+photo: STR
+description: TEXT
+email: STR
+phone: STR
+is_mvp: BOOL [0]
+hire_date: DATE
+
+
+### CONTACT
+id: INT
+user_id: INT
+listing: INT
+listing_id: INT 
+name: STR
+email: STR
+phone: STR
+messgae: TEXT
+contact_date: DATE
+
+
+--we will refer to these schemas when we are creating models in django

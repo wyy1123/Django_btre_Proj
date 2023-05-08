@@ -155,3 +155,9 @@ EMAIL_PORT=587
 EMAIL_HOST_USER = 'my_email'
 EMAIL_HOST_PASSWORD='my_password'
 EMAIL_USE_TLS =True
+
+# production server is the only place where .local_settings will exist
+try:
+    from .local_settings import *
+except ImportError:
+    pass

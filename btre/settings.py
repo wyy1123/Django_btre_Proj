@@ -20,14 +20,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-b3@pqy=!=lcu#5o((40n&-y84p@d17*b3f*bg0i($7m*pjvoux'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -79,16 +71,6 @@ WSGI_APPLICATION = 'btre.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'btredb',
-        'USER': 'postgres',
-        'PASSWORD': 'Wyy13033211!',
-        'HOST':'localhost'
-    }
-}
 
 
 # Password validation
@@ -149,12 +131,7 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
 
-# Email config
-EMAIL_HOST='smtp.gmail.com'
-EMAIL_PORT=587
-EMAIL_HOST_USER = 'my_email'
-EMAIL_HOST_PASSWORD='my_password'
-EMAIL_USE_TLS =True
+
 
 # production server is the only place where .local_settings will exist
 try:
